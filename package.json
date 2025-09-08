@@ -1,0 +1,29 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exact84/Test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Alexey Exact",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exact84/Test/issues"
+  },
+  "homepage": "https://github.com/exact84/Test#readme",
+  "description": "",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.2",
+    "semantic-release": "^24.2.7"
+  }
+}
