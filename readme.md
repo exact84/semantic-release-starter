@@ -1,44 +1,56 @@
-# Plug-and-play semantic-release setup with CHANGELOG and versioning
+For Russian version, see [README.ru.md](README.ru.md)
 
-## Инструкция для внедрения системы семантического релиза
+# Plug-and-play semantic-release setup with CHANGELOG and version management
 
-1️⃣ Первичное создание git tag происходит с помощью npm run release
+## Guide to implementing semantic-release
 
-2️⃣ Настройка npm-токена
+1️⃣ **Enable GitHub Actions workflow permissions**
 
-Создать npm-токен в аккаунте npm:
+In repository settings, go to:
+`Settings → Actions → General → Workflow permissions → “Read and write permissions”`
+
+This allows GitHub Actions to push changes (package.json, CHANGELOG.md, git tags).
+
+2️⃣ **Set up npm token**
+
+Create an npm token in your npm account:  
 https://www.npmjs.com/settings/your_username/tokens
-Добавить токен в GitHub Secrets как NPM_TOKEN.
-Этот токен нужен для обновления package.json.version через npm-плагин даже если публикация отключена (npmPublish: false).
 
-3️⃣ Установка зависимостей
+Add the token to GitHub Secrets as `NPM_TOKEN`.  
+The token is required for updating `package.json.version` via the npm plugin, even if publication is disabled (`npmPublish: false`).
 
+3️⃣ **Install dependencies**
+
+```bash
 npm install --save-dev semantic-release @semantic-release/git @semantic-release/changelog @semantic-release/npm @semantic-release/commit-analyzer @semantic-release/release-notes-generator
+```
 
-4️⃣ Создание конфигурации .releaserc.json
+4️⃣ Create configuration file .releaserc.json
 
-5️⃣ Настройка GitHub Actions workflow \.github\workflows\release.yml
+5️⃣ Set up GitHub Actions workflow .github/workflows/release.yml
 
-6️⃣ Создание npm скрипта для релиза
+6️⃣ Add npm release script
 
-В package.json:
+In package.json:
+```
 "scripts": {
   "release": "semantic-release"
 }
+```
 
-## Коммит-месседж и правила версий
+## Commit messages and version rules
 
-Semantic-release использует Conventional Commits, по умолчанию:
-| Тип коммита                               | Версия | CHANGELOG          |
-| ----------------------------------------- | ------ | ------------------ |
-| `fix:`                                    | patch  | Bug Fixes          |
-| `feat:`                                   | minor  | Features           |
-| `feat!:` или `fix!:` + `BREAKING CHANGE:` | major  | ⚠ BREAKING CHANGES |
-| другие (`chore:`, `docs:`, `refactor:`)   | —      | не учитываются     |
+Semantic-release uses Conventional Commits by default:
+| Commit type                              | Version | CHANGELOG          |
+| ---------------------------------------- | ------- | ------------------ |
+| `fix:`                                   | patch   | Bug Fixes          |
+| `feat:`                                  | minor   | Features           |
+| `feat!:` or `fix!:` + `BREAKING CHANGE:` | major   | ⚠ BREAKING CHANGES |
+| others (`chore:`, `docs:`, `refactor:`)  | —       | not counted        |
 
-Если есть несколько релевантных коммитов → выбирается самый “сильный” тип: major > minor > patch
+If there are multiple relevant commits → the strongest type is chosen: major > minor > patch.
 
-Можно настроить правила версий в .releaserc.json в разделе "plugins":
+You can configure version rules in .releaserc.json under the plugins section:
 
 ```
       "@semantic-release/commit-analyzer",
@@ -53,21 +65,21 @@ Semantic-release использует Conventional Commits, по умолчан�
         ]
       },
 ```
-## Схема работы
+## Workflow diagram
 
 ```mermaid
 flowchart TD
-    A[Коммит в dev или main] --> B[Push на GitHub]
-    B --> C[Запуск GitHub Actions workflow]
-    C --> D[Checkout репозитория с fetch-depth 0]
-    D --> E[Установка Node.js и зависимостей - npm ci]
-    E --> F[Запуск semantic-release через npm run release]
+    A[Commit to dev or main] --> B[Push to GitHub]
+    B --> C[GitHub Actions workflow triggers]
+    C --> D[Checkout repository with fetch-depth 0]
+    D --> E[Install Node.js and dependencies - npm ci]
+    E --> F[Run semantic-release via npm run release]
     
-    F --> G[Анализ коммитов и Определение типа релиза: patch / minor / major]
-    G --> I[Генерация заметок релиза]
-    I --> J[Обновление CHANGELOG.md и package.json]
-    J --> L[Коммит изменений package.json и CHANGELOG.md]
-    L --> M[Создание Git-тега версии]
-    M --> N[Push изменений и тегов обратно в репозиторий]
+    F --> G[Analyze commits and determine release type: patch / minor / major]
+    G --> I[Generate release notes]
+    I --> J[Update CHANGELOG.md and package.json]
+    J --> L[Commit changes to package.json and CHANGELOG.md]
+    L --> M[Create Git version tag]
+    M --> N[Push changes and tags back to repository]
 
 ```
