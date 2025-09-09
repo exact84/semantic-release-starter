@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - dev  # или main, если хочешь релизы из main
+      - dev
 
 permissions:
   contents: write  # обязательно, иначе GH_TOKEN не сможет пушить
@@ -25,3 +25,4 @@ jobs:
       - run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # нужен для обновления package.json
