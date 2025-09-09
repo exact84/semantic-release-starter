@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/exact84/Test/compare/v1.0.0...v1.1.0) (2025-09-09)
+
+
+### Features
+
+* add readme.md ([2743336](https://github.com/exact84/Test/commit/2743336d15449e86c6b44d558c6bc75e6b1ed65d))
+
 # 1.0.0 (2025-09-09)
 
 
