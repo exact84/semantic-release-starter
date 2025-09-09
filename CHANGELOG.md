@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/exact84/Test/compare/v1.1.0...v1.1.1) (2025-09-09)
+
+
+### Bug Fixes
+
+* add NPM_TOKEN ([97942b9](https://github.com/exact84/Test/commit/97942b9a8895b04bc35ad8708169181e22e01baf))
+
 # [1.1.0](https://github.com/exact84/Test/compare/v1.0.0...v1.1.0) (2025-09-09)
 
 
