@@ -6,7 +6,7 @@ on:
       - dev
 
 permissions:
-  contents: write  # обязательно, иначе GH_TOKEN не сможет пушить
+  contents: write  # чтобы GH_TOKEN мог пушить
 
 jobs:
   release:
