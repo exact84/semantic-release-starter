@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/exact84/Test/compare/v1.1.2...v1.2.0) (2025-09-09)
+
+
+### Features
+
+* add commit types rules ([51c06da](https://github.com/exact84/Test/commit/51c06dac8c9b5e616205c9e84eb626b9d0272eb7))
+
 ## [1.1.2](https://github.com/exact84/Test/compare/v1.1.1...v1.1.2) (2025-09-09)
 
 
