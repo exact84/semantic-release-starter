@@ -1,6 +1,6 @@
 {
   "name": "semantic-release-starter",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "index.js",
   "scripts": {
     "release": "semantic-release"
@@ -9,7 +9,12 @@
     "type": "git",
     "url": "git+https://github.com/exact84/Test.git"
   },
-  "keywords": ["semantic-release", "changelog", "versioning", "npm"],
+  "keywords": [
+    "semantic-release",
+    "changelog",
+    "versioning",
+    "npm"
+  ],
   "author": "Alexey Exact",
   "license": "MIT",
   "bugs": {
