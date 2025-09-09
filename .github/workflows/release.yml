@@ -6,7 +6,7 @@ on:
       - dev
 
 permissions:
-  contents: write  # чтобы GH_TOKEN мог пушить
+  contents: write  # so that GH_TOKEN can push
 
 jobs:
   release:
@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # semantic-release нужен весь git history
+          fetch-depth: 0  # semantic-release needs the entire git history
 
       - uses: actions/setup-node@v3
         with:
@@ -25,4 +25,4 @@ jobs:
       - run: npm run release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # нужен для обновления package.json
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # needed to update package.json
