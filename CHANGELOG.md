@@ -1,3 +1,18 @@
+## [2.1.0](https://github.com/exact84/Test/compare/v2.0.0...v2.1.0) (2025-09-11)
+
+### Features
+
+* test3 ([5a85a1e](https://github.com/exact84/Test/commit/5a85a1e60a8771c631033623fbc24f156c71d7bd))
+
+### Bug Fixes
+
+* test2 ([29bd66f](https://github.com/exact84/Test/commit/29bd66f6edcd5c19d7da1f7eead5fb7e169cd357))
+* test2 ([130ba43](https://github.com/exact84/Test/commit/130ba43a9d5ee2dd7ad165ba1b1cc604dca53e86))
+
+### Chores
+
+* test1 ([f8da91a](https://github.com/exact84/Test/commit/f8da91a3a3be6dcffe21b62d1ef844123018a0f2))
+
 ## [2.0.0](https://github.com/exact84/Test/compare/v1.2.3...v2.0.0) (2025-09-11)
 
 ### ⚠ BREAKING CHANGES
