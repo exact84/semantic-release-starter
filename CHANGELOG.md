@@ -1,3 +1,17 @@
+## [2.0.0](https://github.com/exact84/Test/compare/v1.2.3...v2.0.0) (2025-09-11)
+
+### ⚠ BREAKING CHANGES
+
+* test change major version
+
+### Features
+
+* add version table ([fead2cc](https://github.com/exact84/Test/commit/fead2ccc60dc6dd36c1284580639f81c556d27d2))
+
+### Bug Fixes
+
+* test change major version ([4104b17](https://github.com/exact84/Test/commit/4104b170938c614bfe548603390258aedb93e8a3))
+
 ## [1.2.3](https://github.com/exact84/Test/compare/v1.2.2...v1.2.3) (2025-09-11)
 
 ### Bug Fixes
