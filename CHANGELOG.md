@@ -1,3 +1,13 @@
+## [1.2.1](https://github.com/exact84/Test/compare/v1.2.0...v1.2.1) (2025-09-11)
+
+### Bug Fixes
+
+* add package conventional-changelog-conventionalcommits ([98c1dbd](https://github.com/exact84/Test/commit/98c1dbd4756fa73503186db1a4f6d793f3f085fa))
+
+### Chores
+
+* add commits ([54d96fc](https://github.com/exact84/Test/commit/54d96fc3d42ccce8fb081187e4687adb18f1fa4e))
+
 # [1.2.0](https://github.com/exact84/Test/compare/v1.1.2...v1.2.0) (2025-09-09)
 
 
