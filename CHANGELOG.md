@@ -1,3 +1,9 @@
+## [1.2.3](https://github.com/exact84/Test/compare/v1.2.2...v1.2.3) (2025-09-11)
+
+### Bug Fixes
+
+* add types ([644465f](https://github.com/exact84/Test/commit/644465fca8cf7595a724d8cfdab5440f4636bcb5))
+
 ## [1.2.2](https://github.com/exact84/Test/compare/v1.2.1...v1.2.2) (2025-09-11)
 
 ## [1.2.1](https://github.com/exact84/Test/compare/v1.2.0...v1.2.1) (2025-09-11)
